@@ -1,0 +1,22 @@
+.topTitle h1{
+    width: 340px;
+    height: 100px;
+    margin: auto;
+    font-size: 70px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+}
+.topTitle p{
+
+}
+.topTitle h2{
+    width: 258px;
+    height: 35px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+}
