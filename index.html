@@ -1,73 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bling的Cc</title>
-</head>
-<body>
-        <center>
-                <style>
-                 .box h1{
-                             position: relative;
-                            width: 500px;
-                            height: 500px;
-                            margin: 20px auto;
-                            text-align: center;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            top: 50%; /*偏移*/
-                              margin-top: -10px;
-                        }
-                .box p{
-                    position: relative;
-                    width: 400px;
-                    height: 300px;
-                    margin: 20px auto;
-                    text-align: center;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    top: 50%; /*偏移*/
-          			margin-top: -320px;
-                }
-                .box h1{
-                    color:#ffffff;font-size: 70px;lineheight:50px;
-                }
-                .box p{
-                    color:#ffffff;font-size: 30px;lineheight:50px;
-                }
-                </style>
-                <div class="box">
-                    <h1>
-                        Bling的Cc
-                    </h1>
-                    <br/>
-                    <p>
-                            · 这里是Cc的个人主页 ·
-                        </p>
-                </div>  
-               
-                </center>
-    
-    
-    
-    
-    
-    <script>
-        var bingWallpaper = localStorage.getItem("bing-wallpaper")
-        function loadBingWallpaper(headerMap) {
-        document.body.style.backgroundImage = bingWallpaper
-        if (headerMap) {
-        console.log(headerMap["etag"])
-        console.log(headerMap["x-copyright"])
-        console.log(headerMap["x-last-modified"])
-        }
-        }
-        if (bingWallpaper) loadBingWallpaper()
-        </script>
-        <script async src="https://userapi.rthsoftware.cn/1342171891pwitlo/bing.js"></script>
-</body>
-</html>
+.topTitle h1{
+    width: 340px;
+    height: 100px;
+    margin: auto;
+    font-size: 70px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+}
+.topTitle p{
+
+}
+.topTitle h2{
+    width: 258px;
+    height: 35px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+}
