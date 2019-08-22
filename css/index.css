@@ -152,10 +152,7 @@
           background: #272727;
   }
   
-      @font-face {
-          font-family:myFirstFont;
-          src: url('font/Sansation-Light.ttf');
-      }
+     
   
       #navleft{
           color:#ffffff;
@@ -203,7 +200,15 @@
       }
       #mainname
       {
-          
+          font-family: myFirstFont;
+          font-size: 70px;
+          padding-top:50px;
+          text-align: center;
+      }
+      #remain{
+          font-family: myFirstFont;
+          font-size: 40px;
+          text-align: center;
       }
       #aftsys{
   
