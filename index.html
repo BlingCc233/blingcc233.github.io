@@ -2,13 +2,12 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="icon.ico">
     <title>BlingCc</title>
 </head>
 <body>
-<div width="1600px" height="900px">
     <style>
         *{
             margin: 0;
@@ -44,12 +43,12 @@
             .button:active{
                 color:rgb(255, 250, 250);
                 background: #027bc4;
-                border: 4px solid #ffffff;
+                border: 5px solid #ffffff;
             }
             .button:hover{
                 color:rgb(255, 250, 250);
                 background: #027bc4;
-                border: 4px solid #027bc4;
+                border: 5px solid #027bc4;
             }
         </style>
 
@@ -92,13 +91,25 @@
         </div>
 
     <div>
-        <div width=100% style="background: #8b8b8b9b">
-
+        <div width=100% style="color: #ffffff;text-align: center;font-size: 45px;">
+            <script>
+                var xhr = new XMLHttpRequest();
+                xhr.open('get', 'https://v1.hitokoto.cn');
+                xhr.onreadystatechange = function () {
+                  if (xhr.readyState === 4) {
+                    var data = JSON.parse(xhr.responseText);
+                    var hitokoto = document.getElementById('hitokoto');
+                    hitokoto.innerText = data.hitokoto;
+                  }
+                }
+                xhr.send();
+              </script>
+              
         </div>
     </div>
 
 
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+
 
 
 
@@ -124,6 +135,5 @@
         if (bingWallpaper) loadBingWallpaper()
         </script>
         <script async src="https://userapi.rthsoftware.cn/1342171891pwitlo/bing.js"></script>
-</div>
 </body>
 </html>
