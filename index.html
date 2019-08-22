@@ -4,98 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="icon.ico">
-    <title>BlingCc</title>
+    <title>资源</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
+    
     <style>
         *{
             margin: 0;
             padding: 0;
         }
-        </style>
-    <div >
-        <style>
-        #topline{
-            font-size: 20px;
-            font-family: fantasy;
-            text-decoration: none;
-            -webkit-transition-duration: 0.3s; /* Safari */
-            transition-duration: 0.3s;
-            text-align: right;
-        }
-        div{
-            width:100%;
-            height: 10%;
-        }
-        .button{
-            margin: 10px 10px 10px 10px;
-            display: inline-block;
-            background: #ffffff;
-            border: 5px solid #ffffff;
-            padding: 7px 25px;
-            border-radius: 25px;
-            color: #000000;
-            text-decoration: none;
-            
-            cursor: pointer;
-        }
-            .button:active{
-                color:rgb(255, 250, 250);
-                background: #027bc4;
-                border: 5px solid #ffffff;
-            }
-            .button:hover{
-                color:rgb(255, 250, 250);
-                background: #027bc4;
-                border: 5px solid #027bc4;
-            }
+        @font-face {
+          font-family:myFirstFont;
+          src: url('font/Sansation-Light.ttf');
+      }
         </style>
 
-        <div id="topline" style="  background:#ffffff;" >
-            <style>
-            
-            </style>
-                <a style="text-decoration: none;display:inline;color: black;font-size: 40px;text-align: left;padding: 0px 57% 0px 0px;">BlingCc</a>
-                <a href="about.html" style="display: inline;"><button id="topline" class="button" >简介</button></a>
-                <a href="piece.html" style="display: inline;"><button id="topline" class="button" >作品</button></a>
-                <a href="source.html"style="display: inline;"><button id="topline" class="button" >资源</button></a>
-                <a href="settings.html"><button id="topline" class="button"  >设置</button></a>
-                
-        </div>
-    </div>
-
-    <div>
-        <style>
-        div{
-            width: 100%;
-        }
-        </style>
-        <div class="box" >
-                <h1 style="padding: 5px 1px 0px 0px;text-align: right;font-size: 20px;color:#000000;">·这里是Cc的个人主页·</h1>
-            <h1 style="padding: 9% 30% 1% 1%;font-size: 80px;color:#000000;">Bling的Cc</h1>
-            
-        </div>
-    </div>
-
-    <div>
-            <style>
-            div{
-                width: 100%;
-            }
-
-            </style>
-            <div class="box" style="background: #ffffff;">
-                <hr style="color:#000000;height: 1px;border: none;border-top: 1px solid #000000;"/>
-            </div>
-        </div>
-
-        <div>
-            <div width=100% style="background: #d4d4d491;text-align: center;font-size: 45px; ">
-                <p style="color: #d4d4d400;padding:10% 0 10% 0;">Welcome!</p>
-                
-                  
-            </div>
-        </div>
 
 
 
@@ -110,72 +34,173 @@
 
 
 
-    <script src="https://idealclover.top/usr/themes/clover/assets/clover.js"></script>
-    <!-- TODO -->
-    <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
-    <script>
-        $(function() {
-            $('[data-toggle="popover"]').popover()
-        })
-    </script>
-    <script>
-        var scroll = new SmoothScroll('a.turn-up, .article-list a', {
-            offset: 100
-        });
-    </script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <script>
-        var scroll = new SmoothScroll('a.turn-up, .article-list a', {
-            offset: 100
-        });
-    </script>
-    <script>
-        $("p img").each(function(i) {
-            if (!this.parentNode.href && $(this).attr("type")!=="memo") {
-                $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
-            }
-        });
-        $(document).ready(function() {
-            $("[data-fancybox]").fancybox()
-        });
-    </script>
+
+
+<div class="nav">
     
-    <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
-    <script>
-        $('.close').click(function( e ){
-            e.preventDefault();
-            $.cookie('alert-box', 'closed', { path: '/' });
-        });
-        if( $.cookie('alert-box') !== 'closed' ) {
-            $('.alert').css("display","block");
+        <a href="source.html" id="navleft" >BlingCc</a>
+        
+</div>
+<div>
+    <ul style="text-align: right;">
+        <li ><a href="" ><button class="navright">简介</button></a></li>
+        <li ><a href="" ><button class="navright">作品</button></a></li>
+        <li ><a href="source.html" ><button class="navright">资源</button></a></li>
+        <li ><a href="" ><button class="navright">设置</button></a></li>
+        </ul>
+</div>
+<div >
+    <h1 id="mainname">BlingCc</h1>
+    <p id="remain">Simple web , Simple life</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="solarsys">
+  <!--太阳-->
+  <div class='sun'></div>
+
+  <!--水星轨道-->
+  <div class='mercuryOrbit'></div>
+
+  <!--水星-->
+  <div class='mercury'></div>
+
+  <!--金星轨道-->
+  <div class='venusOrbit'></div>
+
+  <!--金星-->
+  <div class='venus'></div>
+
+  <!--地球轨道-->
+  <div class='earthOrbit'></div>
+
+  <!--地球-->
+  <div class='earth'></div>
+
+  <!--火星轨道-->
+  <div class='marsOrbit'></div>
+
+  <!--火星-->
+  <div class='mars'></div>
+
+  <!--木星轨道-->
+  <div class='jupiterOrbit'></div>
+
+  <!--木星-->
+  <div class='jupiter'></div>
+
+  <!--土星轨道-->
+  <div class='saturnOrbit'></div>
+
+  <!--土星-->
+  <div class='saturn'></div>
+
+  <!--天王星轨道-->
+  <div class='uranusOrbit'></div>
+
+  <!--天王星-->
+  <div class='uranus'></div>
+
+  <!--海王星轨道-->
+  <div class='neptuneOrbit'></div>
+
+  <!--海王星-->
+  <div class='neptune'></div>
+</div>
+<script src="https://idealclover.top/usr/themes/clover/assets/clover.js"></script>
+<!-- TODO -->
+<script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+<script>
+    $(function() {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+<script>
+    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
+        offset: 100
+    });
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<script>
+    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
+        offset: 100
+    });
+</script>
+<script>
+    $("p img").each(function(i) {
+        if (!this.parentNode.href && $(this).attr("type")!=="memo") {
+            $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
         }
-    </script>
-    <script type="text/javascript">
-        var _paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-            var u = "//analytics.idealclover.cn/";
-            _paq.push(['setTrackerUrl', u + 'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d = document,
-                g = d.createElement('script'),
-                s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript';
-            g.async = true;
-            g.defer = true;
-            g.src = u + 'matomo.js';
-            s.parentNode.insertBefore(g, s);
-        })();
-    </script>
-    
+    });
+    $(document).ready(function() {
+        $("[data-fancybox]").fancybox()
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
+<script>
+    $('.close').click(function( e ){
+        e.preventDefault();
+        $.cookie('alert-box', 'closed', { path: '/' });
+    });
+    if( $.cookie('alert-box') !== 'closed' ) {
+        $('.alert').css("display","block");
+    }
+</script>
+<script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u = "//analytics.idealclover.cn/";
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d = document,
+            g = d.createElement('script'),
+            s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+</script>
 </body>
 </html>
