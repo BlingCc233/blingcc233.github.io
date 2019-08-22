@@ -163,6 +163,7 @@
           text-decoration: none;
       }
       .navright{
+              outline:none;
           background: #272727;
               display: inline-block;
           color:#ffffff;
