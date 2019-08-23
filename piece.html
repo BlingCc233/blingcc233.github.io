@@ -3,166 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="fdicon.ico">
-    <title>FreeDancer</title>
+    <link rel="shortcut icon" href="icon.ico">
+    <title>作品</title>
+    <link rel="stylesheet" type="text/css" href="css/piece.css">
 </head>
 <body>
     
-        <style>
-                *{
-                    margin: 0;
-                    padding: 0;
-                }
-                </style>
-    <div>
-        <div style="background: #ffffff;width:100%;">
-            <style>
-            .button{
-                background: #ffffff;
-                font-size: 20px;
-                font-family: fantasy;
-                text-decoration: none;
-                -webkit-transition-duration: 0.3s; /* Safari */
-                transition-duration: 0.3s;
-                text-align: right;
-                margin: 10px 10px 10px 10px;
-            display: inline-block;
-            border: 4px solid #ffffff;
-            padding: 7px 25px;
-            border-radius: 25px;
-            color: #000000;
-            text-decoration: none;
-            
-            cursor: pointer;
-            }
-            .button:active{
-                color:rgb(255, 250, 250);
-                background: #027bc4;
-                border: 4px solid #ffffff;
-            }
-            .button:hover{
-                color:rgb(255, 250, 250);
-                background: #027bc4;
-                border: 4px solid #027bc4;
-            }
-            .search-box {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				background: #2f3640;
-				height: 40px;
-				border-radius: 40px;
-				padding: 10px;
-			}
-			.search-btn {
-				color: #e84118;
-				float: right;
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				background: #2f3640;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				transition: 0.4s;
-				text-decoration: none;
-			}
-			.search-txt {
-				border: none;
-				background: none;
-				outline: none;
-				float: left;
-				padding: 0;
-				color: white;
-				font-size: 16px;
-				transition: 0.4s;
-				line-height: 40px;
-				width: 0;
-			}
-			.search-box:hover > .search-txt {
-				width: 240px;
-				padding: 0 6px;
-			}
-			.search-box:hover > .search-btn {
-				background: white;
-			}
-
-            td{
-                margin: 5px 10px 5px 10px;
-            }
-            </style>
-            <table style="padding-right: 10px;">
-                <tr>
-                    
-                    <td><img src="img/logo.jpg" width="100px" style="padding: 0px 20px;"/></td>
-                    <td><input class="search-box search-txt" type="text" placeholder="Type to search" />
-                        <a class="search-btn" href="#">
-                                <i class="fas fa-search"></i>
-                            </a>
-                    </td>
-                    <td><a href="404.html"><button class="button">简介</button></a></td>
-                    <td><a href="404.html"><button class="button">关于</button></a></td>
-                    <td><a href="404.html"><button class="button">作品</button></a></td>
-                    <td><a href="404.html"><button class="button">团队</button></a></td>
-                    <td><a href="404.html"><button class="button">活动</button></a></td>
-                    <td><a href="404.html"><button class="button">报名</button></a></td>
-                    <td><a href="404.html"><button class="button">登录</button></a></td>
-                    <td><a href="404.html"><button class="button">注册</button></a></td>
-                </tr>
-                
-            </table>
-
-        </div>
-    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+          font-family:myFirstFont;
+          src: url('font/Sansation-Light.ttf');
+      }
+      
+        </style>
 
 
-    <div>
-            <style>
-            div{
-                width: 100%;
-            }
-            </style>
-            <div class="box" >
-                    <h1 style="padding: 5px 1px 0px 0px;text-align: right;font-size: 20px;color:#ffffff;">·自由舞者街舞工作室·</h1>
-                <h1 style="padding: 33% 30% 1% 1%;font-size: 80px;color:#ffffff;">FreeDancer'sDanceStudio</h1>
-                
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nav">
     
-        <div>
-                <style>
-                div{
-                    width: 100%;
-                }
-    
-                </style>
-                <div class="box" style="background: #ffffff;">
-                    <hr style="color:#ffffff;height: 1px;border: none;border-top: 1px solid #ffffff;"/>
-                </div>
-            </div>
-    
-        <div>
-            <div width=100% style="background: #cfcfcfa9;text-align: center;font-size: 45px; ">
-                <p style="color: #cfcfcf00;padding:10% 0 10% 0;">666</p>
-                
-                  
-            </div>
-        </div>
-		<p>
-			<script>
-				var xhr = new XMLHttpRequest();
-				xhr.open('get', 'https://v1.hitokoto.cn');
-				xhr.onreadystatechange = function () {
-				  if (xhr.readyState === 4) {
-					var data = JSON.parse(xhr.responseText);
-					var hitokoto = document.getElementById('hitokoto');
-					hitokoto.innerText = data.hitokoto;
-				  }
-				}
-				xhr.send();
-			  </script>
-		</p>
+        <a href="index.html" id="navleft" >BlingCc</a>
+        
+</div>
+<div>
+        
+<div class="topul">
+       
+    <ul style="text-align: right;">
+        <li style="list-style: none;"><a href="index.html" ><button class="navright">首页</button></a></li>
+        <li style="list-style: none;"><a href="piece.html" ><button class="navrightpiece">作品</button></a></li>
+        <li style="list-style: none;"><a href="source.html" ><button class="navright">资源</button></a></li>
+        <li style="list-style: none;"><a href="about.html" ><button class="navright">关于</button></a></li>
+        </ul>
+</div>
+</div>
 
 
 
@@ -171,18 +62,92 @@
 
 
 
-    <script>
-            var bingWallpaper = localStorage.getItem("bing-wallpaper")
-            function loadBingWallpaper(headerMap) {
-            document.body.style.backgroundImage = bingWallpaper
-            if (headerMap) {
-            console.log(headerMap["etag"])
-            console.log(headerMap["x-copyright"])
-            console.log(headerMap["x-last-modified"])
-            }
-            }
-            if (bingWallpaper) loadBingWallpaper()
-            </script>
-            <script async src="https://userapi.rthsoftware.cn/1342171891pwitlo/bing.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://idealclover.top/usr/themes/clover/assets/clover.js"></script>
+<!-- TODO -->
+<script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+<script>
+    $(function() {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+<script>
+    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
+        offset: 100
+    });
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<script>
+    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
+        offset: 100
+    });
+</script>
+<script>
+    $("p img").each(function(i) {
+        if (!this.parentNode.href && $(this).attr("type")!=="memo") {
+            $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
+        }
+    });
+    $(document).ready(function() {
+        $("[data-fancybox]").fancybox()
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
+<script>
+    $('.close').click(function( e ){
+        e.preventDefault();
+        $.cookie('alert-box', 'closed', { path: '/' });
+    });
+    if( $.cookie('alert-box') !== 'closed' ) {
+        $('.alert').css("display","block");
+    }
+</script>
+<script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u = "//analytics.idealclover.cn/";
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d = document,
+            g = d.createElement('script'),
+            s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+</script>
 </body>
 </html>
