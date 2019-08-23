@@ -152,9 +152,11 @@
   top:0; /* 距离窗口顶部距离 */
   left:0; /* 距离窗口左边的距离 */
   width:100%;  /* 高度 */
-        height: 100px;
+        height: 80px;
   z-index:99; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
         background: #272727;
+        
+        box-shadow: rgba(0,0,0,0.1) 0px 5px 20px;
 }
 
    
@@ -162,9 +164,9 @@
     #navleft{
         color:#ffffff;
         font-family:myFirstFont;
-        font-size: 50px;
-        padding-left: 20px;
-        line-height :95px;
+        font-size: 35px;
+        padding-left: 10px;
+        line-height :80px;
         text-decoration: none;
     }
     .navrightindex{
@@ -216,7 +218,7 @@
                 background: #272727;
     }
     .topul{position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
-  top:100px; /* 距离窗口顶部距离 */
+  top:80px; /* 距离窗口顶部距离 */
   right:0;  /* 高度 */
   z-index:99;
     }
