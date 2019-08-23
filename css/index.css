@@ -33,7 +33,7 @@
   animation: rotate 1.5s infinite linear;
 }
 
-
+/*水星轨道*/
 
 /*金星*/
 .venus {
@@ -228,10 +228,20 @@
         text-align: center;
     }
     #remain{
-        font-family: myFirstFont;
-        font-size: 40px;
-        text-align: center;
-    }
+      font-family: myFirstFont;
+      font-size: 40px;
+      text-align: center;
+  }
+  #remain2{
+    font-family: fantasy;
+    font-size: 25px;
+    text-align: center;
+}
+#remain3{
+  font-family: myFirstFont;
+  font-size: 28px;
+  text-align: center;
+}
     #aftsys{
 
     }
