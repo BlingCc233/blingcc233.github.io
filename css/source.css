@@ -1,0 +1,75 @@
+.nav{
+
+        
+    position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+    top:0; /* 距离窗口顶部距离 */
+    left:0; /* 距离窗口左边的距离 */
+    width:100%;  /* 高度 */
+          height: 100px;
+    z-index:99; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+          background: #272727;
+  }
+  
+     
+  
+      #navleft{
+          color:#ffffff;
+          font-family:myFirstFont;
+          font-size: 50px;
+          padding-left: 20px;
+          line-height :95px;
+          text-decoration: none;
+      }
+      .navrightsource{
+        outline: none;
+          background: #272727;
+              display: inline-block;
+          color:#ffffff;
+          text-decoration: none;
+          border: 5px solid #272727;
+          margin: auto;
+          font-size: 25px;
+              font-family: fantasy;
+              text-decoration: none;
+              -webkit-transition-duration: 0.3s; /* Safari */
+              transition-duration: 0.3s;
+              padding: 20px 100px 20px 20px;
+              border-radius: 20px 0px 0px 25px;
+              margin-right: 0px;
+              transition: padding-right 0.5s;
+              text-align: right;
+              cursor: default;
+      }
+      .navright{
+          outline: none;
+          background: #272727;
+              display: inline-block;
+          color:#ffffff;
+          text-decoration: none;
+          border: 5px solid #272727;
+          margin: auto;
+          font-size: 25px;
+              font-family: fantasy;
+              text-decoration: none;
+              -webkit-transition-duration: 0.3s; /* Safari */
+              transition-duration: 0.3s;
+              padding: 20px 20px 20px 20px;
+              border-radius: 20px 0px 0px 25px;
+              margin-right: 0px;
+              transition: padding-right 0.5s;
+              text-align: right;
+              cursor: pointer;
+      }
+      .navright:hover{
+          padding-right: 100px;
+      }
+      .navright:active{
+          padding-right:100px;
+          color:#ffffff;
+                  background: #272727;
+      }
+      .topul{position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+    top:100px; /* 距离窗口顶部距离 */
+    right:0;  /* 高度 */
+    z-index:99;
+      }

@@ -167,6 +167,26 @@
         line-height :95px;
         text-decoration: none;
     }
+    .navrightindex{
+      outline: none;
+        background: #272727;
+            display: inline-block;
+        color:#ffffff;
+        text-decoration: none;
+        border: 5px solid #272727;
+        margin: auto;
+        font-size: 25px;
+            font-family: fantasy;
+            text-decoration: none;
+            -webkit-transition-duration: 0.3s; /* Safari */
+            transition-duration: 0.3s;
+            padding: 20px 100px 20px 20px;
+            border-radius: 20px 0px 0px 25px;
+            margin-right: 0px;
+            transition: padding-right 0.5s;
+            text-align: right;
+            cursor: default;
+    }
     .navright{
         outline: none;
         background: #272727;
@@ -185,11 +205,11 @@
             margin-right: 0px;
             transition: padding-right 0.5s;
             text-align: right;
+            cursor: pointer;
     }
     .navright:hover{
         padding-right: 100px;
     }
-
     .navright:active{
         padding-right:100px;
         color:#ffffff;
