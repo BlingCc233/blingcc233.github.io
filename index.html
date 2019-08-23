@@ -8,7 +8,23 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-    
+        <script type="text/javascript">  
+            var url = window.location.pathname;
+            var wapurl="mobile/index.html"
+            
+            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+                if(window.location.href.indexOf("?mobile")<0){
+                    try{
+                        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                             window.location.href=wapurl; 
+                        }else{ 
+                            window.location.href=wapurl;
+                        }
+                    }catch(e){}
+                }
+            }
+            </script>
+
     <style>
         *{
             margin: 0;
@@ -23,7 +39,7 @@
 
 
 
-    
+
 
 
 
@@ -56,6 +72,10 @@
 <div>
         <h1 id="mainname">BlingCc</h1>
         <p id="remain">Simple web , Simple life</p>
+        <br/>
+        <p id="remain2">· 这里是<span id="remain3">CC</span>的个人主页 ·</p>
+        <br/>
+        <p id="remain2"></p>
 </div>
 </div>
 
