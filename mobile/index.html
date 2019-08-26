@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="icon.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlingCc</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    
+    <script>
+            $(document).ready(function(){
+              $(".menu").click(function(){
+                $(".navbar").toggle(200);
+              });
+            });
+            </script>
+    <script>
+        $(document).ready(function(){
+          $(".about").click(function(){
+            $(".navbar").toggle(200);
+          });
+        });
+        </script>
 </head>
 <body>
        
@@ -31,120 +50,72 @@
 
 
 
-
-
-
-
-
-
-
+        
 <div class="nav">
     
-        <a href="index.html" id="navleft" >BlingCc</a>
-        
-</div>
-<div>
-        
-<div class="topul">
-       
-    <ul style="text-align: right;">
-        <li style="list-style: none;"><a href="index.html" ><button class="navrightindex">首页</button></a></li>
-        <li style="list-style: none;"><a href="piece.html" ><button class="navright">作品</button></a></li>
-        <li style="list-style: none;"><a href="source.html" ><button class="navright">资源</button></a></li>
-        <li style="list-style: none;"><a href="about.html" ><button class="navright">关于</button></a></li>
-        </ul>
-</div>
-<div>
-        <h1 id="mainname">BlingCc</h1>
-        <p id="remain">Simple web , Simple life</p>
-        <br/>
-        <p id="remain2">· 这里是<span id="remain3">CC</span>的个人主页 ·</p>
-        <br/>
-        <p id="remain2"></p>
-</div>
+    <a href="index.html" id="navleft" >BlingCc</a>
+    
+
+    <button class="menu"
+    ><img class="menulogo " src="img/menuico.png" height="30px" />
+    </button>
+
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="solarsys">
-  <!--太阳-->
-  <div class='sun'></div>
-
-  <!--水星轨道-->
-  <div class='mercuryOrbit'></div>
-
-  <!--水星-->
-  <div class='mercury'></div>
-
-  <!--金星轨道-->
-  <div class='venusOrbit'></div>
-
-  <!--金星-->
-  <div class='venus'></div>
-
-  <!--地球轨道-->
-  <div class='earthOrbit'></div>
-
-  <!--地球-->
-  <div class='earth'></div>
-
-  <!--火星轨道-->
-  <div class='marsOrbit'></div>
-
-  <!--火星-->
-  <div class='mars'></div>
-
-  <!--木星轨道-->
-  <div class='jupiterOrbit'></div>
-
-  <!--木星-->
-  <div class='jupiter'></div>
-
-  <!--土星轨道-->
-  <div class='saturnOrbit'></div>
-
-  <!--土星-->
-  <div class='saturn'></div>
-
-  <!--天王星轨道-->
-  <div class='uranusOrbit'></div>
-
-  <!--天王星-->
-  <div class='uranus'></div>
-
-  <!--海王星轨道-->
-  <div class='neptuneOrbit'></div>
-
-  <!--海王星-->
-  <div class='neptune'></div>
+<script>
+$ (document).ready(function(){
+            $(".navbar").hide();
+          });
+</script>
+<div class="navbar">
+    <ul style="list-style: none;">
+    <li id="navli"><a href="#index" class="about">
+        首页</a></li>
+        <li id="navli"><a href="#piece" class="about">
+        作品</a></li>
+        <li id="navli"><a href="#source" class="about">
+        资源</a></li>
+        <li id="navli"><a href="#about" class="about">
+        关于</a></li>
+    </ul>
 </div>
+
+
+<div id="index">
+    <h1 id="mainname">BlingCc</h1>
+    <p id="remain">Simple web , Simple life</p>
+    <br/>
+    <p id="remain2">· 这里是<span id="remain3">CC</span>的个人主页 ·</p>
+    <br/>
+    <p id="remain2"></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script src="https://idealclover.top/usr/themes/clover/assets/clover.js"></script>
 <!-- TODO -->
 <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
