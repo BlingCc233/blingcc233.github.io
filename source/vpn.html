@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="icon.ico">
+    <title>资源</title>
+    <link rel="stylesheet" type="text/css" href="css/source.css">
+</head>
+<body>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+          font-family:myFirstFont;
+          src: url('https://raw.githubusercontent.com/BlingCc233/blingcc233.github.io/master/font/Sansation-Light.ttf');
+      }
+      .nav{
+
+        
+position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+top:0; /* 距离窗口顶部距离 */
+left:0; /* 距离窗口左边的距离 */
+width:100%;  /* 高度 */
+      height: 80px;
+z-index:99; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+      background: #272727;
+}
+
+ 
+
+  #navleft{
+      color:#ffffff;
+      font-family:myFirstFont;
+      font-size: 50px;
+      padding-left: 10px;
+      line-height :80px;
+      text-decoration: none;
+  }
+  .navrightsource{
+    outline: none;
+      background: #272727;
+          display: inline-block;
+      color:#ffffff;
+      text-decoration: none;
+      border: 5px solid #272727;
+      margin: auto;
+      font-size: 25px;
+          font-family: fantasy;
+          text-decoration: none;
+          -webkit-transition-duration: 0.3s; /* Safari */
+          transition-duration: 0.3s;
+          padding: 20px 100px 20px 20px;
+          border-radius: 20px 0px 0px 25px;
+          margin-right: 0px;
+          transition: padding-right 0.5s;
+          text-align: right;
+          cursor: default;
+  }
+  .navright{
+      outline: none;
+      background: #272727;
+          display: inline-block;
+      color:#ffffff;
+      text-decoration: none;
+      border: 5px solid #272727;
+      margin: auto;
+      font-size: 25px;
+          font-family: fantasy;
+          text-decoration: none;
+          -webkit-transition-duration: 0.3s; /* Safari */
+          transition-duration: 0.3s;
+          padding: 20px 20px 20px 20px;
+          border-radius: 20px 0px 0px 25px;
+          margin-right: 0px;
+          transition: padding-right 0.5s;
+          text-align: right;
+          cursor: pointer;
+  }
+  .navright:hover{
+      padding-right: 100px;
+  }
+  .navright:active{
+      padding-right:100px;
+      color:#ffffff;
+              background: #272727;
+  }
+  .topul{position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+top:80px; /* 距离窗口顶部距离 */
+right:0;  /* 高度 */
+z-index:99;
+  }
+  #source{
+      width: 100%;
+      height: 580px;
+  }
+  #vpn{
+      width: 215px;
+      height: 290px;
+    
+      background: #ffffff;
+  }
+        </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="nav">
+    
+        <a href="https://blingcc233.github.io" id="navleft" >BlingCc</a>
+        
+</div>
+<div>
+        
+<div class="topul">
+       
+    <ul style="text-align: right;">
+        <li style="list-style: none;"><a href="https://blingcc233.github.io" ><button class="navright">首页</button></a></li>
+        <li style="list-style: none;"><a href="https://blingcc233.github.io/piece.html" ><button class="navright">作品</button></a></li>
+        <li style="list-style: none;"><a href="https://blingcc233.github.io/source.html" ><button class="navrightsource">资源</button></a></li>
+        <li style="list-style: none;"><a href="https://blingcc233.github.io/about.html" ><button class="navright">关于</button></a></li>
+        </ul>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://idealclover.top/usr/themes/clover/assets/clover.js"></script>
+<!-- TODO -->
+<script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+<script>
+    $(function() {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+<script>
+    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
+        offset: 100
+    });
+</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+<script>
+    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
+        offset: 100
+    });
+</script>
+<script>
+    $("p img").each(function(i) {
+        if (!this.parentNode.href && $(this).attr("type")!=="memo") {
+            $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
+        }
+    });
+    $(document).ready(function() {
+        $("[data-fancybox]").fancybox()
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
+<script>
+    $('.close').click(function( e ){
+        e.preventDefault();
+        $.cookie('alert-box', 'closed', { path: '/' });
+    });
+    if( $.cookie('alert-box') !== 'closed' ) {
+        $('.alert').css("display","block");
+    }
+</script>
+<script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u = "//analytics.idealclover.cn/";
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d = document,
+            g = d.createElement('script'),
+            s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+</script>
+</body>
+</html>
