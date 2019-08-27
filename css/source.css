@@ -15,7 +15,7 @@
       #navleft{
           color:#ffffff;
           font-family:myFirstFont;
-          font-size: 50px;
+          font-size: 35px;
           padding-left: 10px;
           line-height :80px;
           text-decoration: none;
@@ -90,7 +90,7 @@
           height: 250px;
           outline: none;
           text-decoration: none;
-        
+        background: #ffffff;
       }
       #vpnword{
         outline: none;
@@ -101,4 +101,5 @@
           width: 250px;
           color: #272727;
           height: 40px;
+          background: #ffffff;
       }
