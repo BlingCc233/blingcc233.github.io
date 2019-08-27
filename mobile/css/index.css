@@ -16,7 +16,6 @@
      
   
       #navleft{
-        width: 100%;
         outline: none;
           float: left;
         line-height: 80px;
@@ -27,7 +26,7 @@
           text-decoration: none;
           background: #272727;
           z-index: 3000;
-          cursor: default;
+          cursor: pointer;
       }
       .navright{
         outline: none;
@@ -43,10 +42,8 @@
           border: none;
           padding-right: 10px;
           z-index: 3500;
-      }
-      .menu{
+          
         outline:none;
-        text-decoration: none;
         cursor: pointer;
       }
       .navbar{
