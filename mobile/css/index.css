@@ -47,6 +47,7 @@
         cursor: pointer;
       }
       .navbar{
+       color:#ffffff;
         background: #272727;
         position:fixed;
         top:80px;
