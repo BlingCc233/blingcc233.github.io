@@ -90,6 +90,8 @@
   }
   .about:hover{
     outline: none;
+    background: #1f1f1f;
+
   }
   #navli{
     margin-top: 10px;
@@ -100,6 +102,7 @@
     height: 100%;
   }
   .button{
+     color:#ffffff;
     width: 100%;
     background: #272727;
     padding-left: 10%;
