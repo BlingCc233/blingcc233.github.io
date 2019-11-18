@@ -75,16 +75,7 @@
     });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
-<script>
-    $('.close').click(function( e ){
-        e.preventDefault();
-        $.cookie('alert-box', 'closed', { path: '/' });
-    });
-    if( $.cookie('alert-box') !== 'closed' ) {
-        $('.alert').css("display","block");
-    }
-</script>
+
 
 </body>
 </html>
