@@ -30,10 +30,10 @@ padding:0px 0px 0px 0px ;
             button:hover{
             color:#272727;background:#ffffff;
             }
-            a{
+            p{
               transition:0.3s ;
               }
-             a:hover{
+             p:hover{
                 font-size :250px;
             }
              a:checked {
@@ -70,6 +70,37 @@ text-decoration:none; color:rgb(256,0,0);
 margin-top:20%; text-align:center; font-size:200px; color:rgb(256,0,0);
 }
                 </style>
+
+
+    <script>
+            $(document).ready(function(){
+              $("#love").click(function(){
+                $(".shadow").toggle(300);
+              });
+            });
+            </script>
+
+    <script>
+            $(document).ready(function(){
+              $("#love").click(function(){
+                $(".outbox").toggle(300);
+              });
+            });
+            </script>
+
+<script>
+$ (document).ready(function(){
+            $(".shadow").hide();
+          });
+</script>
+
+<script>
+$ (document).ready(function(){
+            $(".outbox").hide();
+          });
+</script>
+
+
     <div>
         <div style="width: 100%;text-align: center;margin: 0px 0px 0px 0px;">
             <p style="font-family: myFirstFont;text-align: center;color:#000000;font-size: 290px;padding: 5% 0 0 0;">
