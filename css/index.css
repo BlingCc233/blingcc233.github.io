@@ -1,3 +1,17 @@
+
+@font-face {
+  font-family:YaHei;
+  src: url('font/微软雅黑.ttf');
+}
+@font-face {
+  font-family:myFirstFont;
+  src: url('font/Sansation-Light.ttf');
+}
+@font-face {
+  font-family:YouYuan;
+  src: url('font/幼圆.ttf');
+}
+
 .solarsys{
   width: 800px;
   height: 600px;
@@ -178,7 +192,7 @@
         border: 5px solid #272727;
         margin: auto;
         font-size: 25px;
-            font-family: fantasy;
+            font-family:YaHei;
             text-decoration: none;
             -webkit-transition-duration: 0.3s; /* Safari */
             transition-duration: 0.3s;
@@ -198,7 +212,7 @@
         border: 5px solid #272727;
         margin: auto;
         font-size: 25px;
-            font-family: fantasy;
+            font-family:YaHei;
             text-decoration: none;
             -webkit-transition-duration: 0.3s; /* Safari */
             transition-duration: 0.3s;
@@ -235,7 +249,7 @@
       text-align: center;
   }
   #remain2{
-    font-family: fantasy;
+    font-family: YouYuan;
     font-size: 25px;
     text-align: center;
 }
