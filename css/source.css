@@ -74,11 +74,12 @@
     z-index:99;
       }
       #source{
-          margin-top: 150px;
           width: 100%;
           height: 580px;
       }
       #vpn{
+        
+        margin-top: 150px;
           float: left;
           width: 250px;
           height: 300px;
@@ -106,6 +107,8 @@
       }
 
       #picacg{
+        
+        margin-top: 150px;
         float: left;
         width: 250px;
         height: 300px;
@@ -115,6 +118,29 @@
       }
       #picaword{
           line-height: 300px;
+        outline: none;
+        text-decoration: none;
+          font-family: myFirstFont;
+          text-align: center;
+          font-size: 40px;
+          width: 250px;
+          color: #272727;
+          height: 40px;
+          background: #ffffff;
+      }
+      #vs{
+        
+        margin-top: 150px;
+        float: left;
+        width: 250px;
+        height: 300px;
+        margin-left: 100px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+      }
+      #vsword{
+        
+        line-height: 300px;
         outline: none;
         text-decoration: none;
           font-family: myFirstFont;
