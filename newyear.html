@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="icon.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恭賀新春</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <style>
+        *{
+            outline:none;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        @font-face {
+          font-family:myFirstFont;
+          src: url('font/Sansation-Light.ttf');
+      }
+        @font-face {
+          font-family:YaHei;
+          src: url('font/微软雅黑.ttf');
+      }
+@font-face {
+  font-family:YouYuan;
+  src: url('font/幼圆.ttf');
+}
+
+
+.nav{
+  
+          
+  position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+  top:0; /* 距离窗口顶部距离 */
+  left:0; /* 距离窗口左边的距离 */
+  width:100%;  /* 高度 */
+        height: 50px;
+  z-index:9999; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+        background: #ffffff;
+        box-shadow: rgba(0,0,0,0.1) 0px 5px 20px;
+}
+
+   
+
+    #navleft{
+      outline: none;
+        float: left;
+      line-height: 47px;
+        color:#d32c37;
+        font-family:YouYuan;
+        font-size: 25px;
+        padding-left: 20px;
+        text-decoration: none;
+        background: #ffffff;
+        z-index: 3000;
+        cursor: pointer;
+        font-weight: 550;
+    }
+    .navright{
+      outline: none;
+      background: #272727;
+      color:#ffffff;
+      font-size: 20px;
+    }
+    .menulogo{
+        outline: none;
+        position: absolute;
+        top:25px;
+        right: 10px;
+        border: none;
+        padding-right: 10px;
+        z-index: 3500;
+        
+      outline:none;
+      cursor: pointer;
+    }
+    .navbar{
+     color:#ffffff;
+      background: #ffffff;
+      position:fixed;
+      top:50px;
+      right: 0px;
+      border: none;
+      width: 60%;
+      z-index: 99;
+      height: 100%;
+      box-shadow: -10px 10px 5px rgba(0,0,0,0.1);
+    }
+    #mainname
+    { 
+        padding-top: 200px;
+        font-family: myFirstFont;
+        font-size: 70px;
+        text-align: center;
+    }
+    #remain{
+      padding-top: 50px;
+      font-family: myFirstFont;
+      font-size: 30px;
+      text-align: center;
+  }
+  #remain2{
+    padding-top: 50px;
+    font-family: fantasy;
+    font-size: 20px;
+    text-align: center;
+}
+#remain3{
+  font-family: myFirstFont;
+  font-size: 23px;
+  text-align: center;
+}
+
+.about{
+  outline: none;
+  color: #ffffff;
+  background: #272727;
+  cursor: pointer;text-decoration: none;
+}
+.about:hover{
+  outline: none;
+  background: #1f1f1f;
+
+}
+#navli{
+  margin-top: 10px;
+}
+
+#index{
+  width: 100%;
+  height: 100%;
+}
+.button{
+   color:#ffffff;
+  width: 100%;
+  background: #272727;
+  padding-left: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+  text-align: left;
+}
+.button:hover{
+  outline: none;
+  background: #1f1f1f;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  background-color:#d42a36;
+  border-radius: 100%;
+  
+  position: absolute;
+        top:10px;
+        right: 10px;
+        z-index: 3500;
+        cursor: pointer;
+        
+}
+        </style>
+
+<img style="position: fixed; z-index: -1;top: 50px;" src="img/newyear.png" width="100%" />
+<div style="width: 100%;height: 100%;background-color: #700410; position: fixed; top: 0;left: 0;z-index: -3;"></div>
+<div class="nav">
+    
+    <p id="navleft" >恭賀新春</p>
+    <div class="circle"></div>
+    
+
+</div>
+
+
+<script>
+    $ (document).ready(function(){
+                $(".navbar").hide();
+              });
+    </script>
+
+    <div class="navbar">
+        <a href="index.html">
+<div style="margin-top: 100px;width: 100%;">
+<p style="font-size: 70px;font-family: YouYuan;color: #d32c37;text-align: center;">大庚</p>
+
+    <p style="font-size: 70px;font-family: YouYuan;color: #d32c37;text-align: center;">吉子</p>
+
+    </div>
+</a>
+    </div>
+    <script>
+        $(document).ready(function(){
+          $(".circle").click(function(){
+            $(".navbar").toggle(200);
+          });
+        });
+        </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+<canvas id="c_n4" width="375" height="812" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.5;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
