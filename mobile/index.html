@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -11,22 +12,24 @@
 
 </head>
 <body>
-   <!-- <script type="text/javascript">  
-        var url = window.location.pathname;
-        var wapurl="mobile/index.html"
+    
+   <script type="text/javascript">  
+       
+
+        if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                        $ (document).ready(function(){
+              $("#win").hide();
+            });
+            $ (document).ready(function(){
+              $(".navright").hide();
+            });
+            }}
+             else {//电脑
+            
+}
         
-        if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
-            if(window.location.href.indexOf("?mobile")<0){
-                try{
-                    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
-                         window.location.href=wapurl; 
-                    }else{ 
-                        window.location.href=wapurl;
-                    }
-                }catch(e){}
-            }
-        }
-        </script>-->
+        </script>
     <style>
         *{
             outline:none;
@@ -38,10 +41,6 @@
         @font-face {
           font-family:eng;
           src: url('font/Sansation-Light.ttf');
-      }
-        @font-face {
-          font-family:YaHei;
-          src: url('font/微软雅黑.ttf');
       }
 @font-face {
   font-family:YouYuan;
@@ -80,15 +79,34 @@ html,body {
         padding-left: 20px;
         text-decoration: none;
         background: #ffffff;
-        z-index: 101;
+        z-index: 103;
         cursor: pointer;
         font-weight: 550;
     }
     .navright{
-      outline: none;
-      background: #272727;
-      color:#ffffff;
-      font-size: 20px;
+        width: 68%;
+        height: 60px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        position: fixed;
+        z-index: 101;
+        right: 15px;
+    }
+    .navbutton{
+        margin: 8px 0px 0px 30px;
+        padding: 7px 20px 7px 20px;
+border: #7eabd4 2px solid;
+border-radius: 70px;
+background-color: #fff;
+color: #7eabd4;
+font-family: YouYuan;
+font-size: 20px;
+transition: 0.2s;
+cursor: pointer;
+    }
+    .navbutton:hover{
+background-color: #7eabd4;
+color: #fff;
     }
     .menulogo{
         outline: none;
@@ -110,9 +128,9 @@ html,body {
       right: 0px;
       border: none;
       width: 60%;
+      transition: 0.3s;
       z-index: 99;
       height: 100%;
-        transition:0.3s;
       box-shadow: -10px 10px 5px rgba(0,0,0,0.1);
     }
     #mainname
@@ -157,7 +175,7 @@ html,body {
 #index{
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  
 }
 .button{
   color: #7eabd4;
@@ -190,26 +208,20 @@ html,body {
   position: absolute;
         top:15px;
         right: 10px;
-        z-index: 101;
+        z-index: 103;
         cursor: pointer;
         
 }
 #indeximg{
   
-  z-index: -1;
+    z-index: -1;
     position: fixed;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(img/indexback.jpg);
+    background-image: url('https://a.maorx.cn/images/BG_A_Default_1.jpg');
     color: transparent;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    -ms-transition: opacity 1s;
-    transition: opacity 1s;
-    opacity: 0;
 filter: blur(5px);
 
 -webkit-filter: blur(5px);  /* chrome, opera */
@@ -219,6 +231,7 @@ filter: blur(5px);
 -moz-filter: blur(5px);
 
 position: fixed; z-index: -1;top: 50px; 
+
 }
 .shadow{
   transition:0.3s;
@@ -233,8 +246,8 @@ background:rgba(0,0,0,0.3);
 .sourcediv{
     
     
-        
-        margin-top: 90px;
+        background-color: #ffffff;
+        margin-top: 60px;
           float: left;
           width: 250px;
           height: 300px;
@@ -243,17 +256,30 @@ background:rgba(0,0,0,0.3);
           cursor: pointer;
 
 }
+.sourcediv1{
+    
+    
+    background-color: #ffffff;
+    margin-top: 60px;
+      float: left;
+      width: 250px;
+      height: 300px;
+      margin-left: 60px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+
+}
 .vpn{
-             width:60%;
+             width:100%;
              height:70%;
-             position: relative;;
-             left:50%;
-             top:23%;
+             text-align: center;
+             position: fixed;
+             top: 20%;
+             transition: 0.3s;
              z-index:98;
              background:#ffffff;
              border-radius:30px;
              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            margin-left:-27%;
 
 }
 #about{
@@ -266,13 +292,27 @@ background:rgba(0,0,0,0.3);
     width: 100%;
     height: 200%;
 }
+#piece{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+#win{
+
+}
 
         </style>
-<div id="indeximg" style="opacity: 1;"></div>
-<div style="width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: -3;"></div>
+        <div id="indeximg" style="opacity: 1;"></div>
+        <div style="width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: -3;"></div>
 <div class="nav">
     
-    <p id="navleft" >BlingCc</p>
+    <a href="https://blingcc233.github.io/"><p id="navleft" >BlingCc</p></a>
+    <div class="navright">
+        <a href="#index"><button class="navbutton">首页</button></a>
+        <a href="#about"><button class="navbutton">关于</button></a>
+        <a href="#source"><button class="navbutton">资源</button></a>
+        <a href="#piece"><button class="navbutton">作品</button></a>
+    </div>
     <div class="circle"></div>
     
 
@@ -302,7 +342,7 @@ background:rgba(0,0,0,0.3);
             <a href="#piece" class="about"><li id="navli"><button class="button">
             作品</button></li></a>
         </ul>
-<audio src="audio/棱镜.mp3" controls autoplay style="width: 100%;margin-top: 10px;"></audio>
+<audio src="https://blingcc233.github.io/audio/棱镜.mp3" controls autoplay style="width: 100%;margin-top: 10px;"></audio>
     </div>
     <div class="shadow">
 
@@ -312,7 +352,7 @@ background:rgba(0,0,0,0.3);
     <script>
         $(document).ready(function(){
           $(".circle").click(function(){
-            $(".navbar").toggle(300);
+            $(".navbar").toggle(130);
           });
         });
         </script>
@@ -326,7 +366,7 @@ background:rgba(0,0,0,0.3);
     <script>
         $(document).ready(function(){
           $(".shadow").click(function(){
-            $(".navbar").toggle(300);
+            $(".navbar").hide(300);
           });
         });
         </script>
@@ -367,15 +407,52 @@ background:rgba(0,0,0,0.3);
   <div style="padding-top:90px;">
 <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;">关于我</p>
 <p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">很普通的高中生，苦逼的程序员，啥都不会</p>
+      <p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">喜欢打游戏，编曲，<span style="font-family:eng;">Python,C++,HTML</span>学习中</p>
 </div>
 </div>
 
 <div id="source">
-    <a href="https://blingcc233.github.io/source/vpn.html" target="_blank"><div class="sourcediv">
+    <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;padding-top: 90px;">资源</p>
+    <div class="sourcediv1">
         <img src="img/img1.png" width="250px">
         <p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 40px;">V P N</p>
     </div>
-</a>
+
+<script>
+    $(document).ready(function(){
+      $(".sourcediv1").click(function(){
+        $(".vpn").toggle(300);
+      });
+    });
+    </script>
+    <script>
+        $(document).ready(function(){
+          $(".vpn").click(function(){
+            $(".vpn").toggle(300);
+          });
+        });
+        </script>
+        <script>
+            $(document).ready(function(){
+              $(".sourcediv1").click(function(){
+                $(".shadow").toggle(00);
+              });
+            });
+            </script>
+            <script>
+                $(document).ready(function(){
+                  $(".vpn").click(function(){
+                    $(".shadow").toggle(00);
+                  });
+                });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                      $(".shadow").click(function(){
+                        $(".vpn").hide(300);
+                      });
+                    });
+                    </script>
     <div class="sourcediv">
         <a href="source/android/哔咔.apk"><p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">Pic ACG</p></a>
     </div>
@@ -388,9 +465,22 @@ background:rgba(0,0,0,0.3);
                   });
         </script>
     <div class="vpn">
+  <div style="margin: 0 auto;text-align: center;position: relative;top: 30%;">
+    
+<a style="margin-top: 30px;" href="source/android/自由门.apk" id="androidimg"><img src="source/img/Android.png" width="250px"/></a>
 
+
+<a id="win" style="margin-top: 30px;" href="source/windows/Windows翻墙工具.bat"><img src="source/img/win.png" width="250px"/></a>
+</div>
     </div>
 </div>
+
+<div id="piece">
+    <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;padding-top: 90px;">作品</p>
+<a href="https://blingcc233.github.io/newyear.html"><div class="sourcediv"><p style="color: #d32c37;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">庚子</p></div></a>
+</div>
+    
+    
 
 <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
 <canvas id="c_n4" width="375" height="812" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.5;"></canvas>
