@@ -7,17 +7,343 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlingCc</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <script type="text/javascript">  
+        var url = window.location.pathname;
+        var wapurl="mobile/index.html"
+        
+        if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+            if(window.location.href.indexOf("?mobile")<0){
+                try{
+                    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                         window.location.href=wapurl; 
+                    }else{ 
+                        window.location.href=wapurl;
+                    }
+                }catch(e){}
+            }
+        }
+        </script>
+    <style>
+        *{
+            outline:none;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        @font-face {
+          font-family:eng;
+          src: url('font/Sansation-Light.ttf');
+      }
+        @font-face {
+          font-family:YaHei;
+          src: url('font/微软雅黑.ttf');
+      }
+@font-face {
+  font-family:YouYuan;
+  src: url('font/幼圆.ttf');
+}
+
+html,body {
+            height: 100%;
+            width:100%;
+            margin: 0;
+            padding: 0;
+        }
+
+.nav{
+  
+          
+  position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+  top:0; /* 距离窗口顶部距离 */
+  left:0; /* 距离窗口左边的距离 */
+  width:100%;  /* 高度 */
+        height: 60px;
+  z-index:100; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+        background: #ffffff;
+        box-shadow: rgba(0,0,0,0.1) 0px 5px 20px;
+}
+
+   
+
+    #navleft{
+      outline: none;
+        float: left;
+      line-height: 60px;
+        color:#7eabd4;
+        font-family:eng;
+        font-size: 30px;
+        padding-left: 20px;
+        text-decoration: none;
+        background: #ffffff;
+        z-index: 101;
+        cursor: pointer;
+        font-weight: 550;
+    }
+    .navright{
+      outline: none;
+      background: #272727;
+      color:#ffffff;
+      font-size: 20px;
+    }
+    .menulogo{
+        outline: none;
+        position: absolute;
+        top:25px;
+        right: 10px;
+        border: none;
+        padding-right: 10px;
+        z-index: 3500;
+        
+      outline:none;
+      cursor: pointer;
+    }
+    .navbar{
+     color:#ffffff;
+      background: #ffffff;
+      position:fixed;
+      top:50px;
+      right: 0px;
+      border: none;
+      width: 60%;
+      z-index: 99;
+      height: 100%;
+      box-shadow: -10px 10px 5px rgba(0,0,0,0.1);
+    }
+    #mainname
+    { 
+        padding-top: 200px;
+        font-family: myFirstFont;
+        font-size: 70px;
+        text-align: center;
+    }
+    #remain{
+      padding-top: 50px;
+      font-family: myFirstFont;
+      font-size: 30px;
+      text-align: center;
+  }
+  #remain2{
+    padding-top: 50px;
+    font-family: fantasy;
+    font-size: 20px;
+    text-align: center;
+}
+#remain3{
+  font-family: myFirstFont;
+  font-size: 23px;
+  text-align: center;
+}
+
+.about{
+  outline: none;
+  text-align: center;
+  color: #272727;
+ background-color: #ffffff;
+  cursor: pointer;text-decoration: none;
+
+}
+#navli{
+  margin-top: 10px;
+  color: #272727;
+  text-align: center;
+}
+
+#index{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button{
+  color: #7eabd4;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: YouYuan;
+  border:none;
+  border-radius:70px;
+  -webkit-transition-duration: 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover{
+  outline: none;
+  background: #f1f3f4;
+  transform: 0.3s;
+
+  transition: 0.3s;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  background-color:#7eabd4;
+  border-radius: 100%;
+  
+  position: absolute;
+        top:15px;
+        right: 10px;
+        z-index: 101;
+        cursor: pointer;
+        
+}
+#indeximg{
+  
+  z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(img/indexback.jpg);
+    color: transparent;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+    opacity: 0;
+filter: blur(5px);
+
+-webkit-filter: blur(5px);  /* chrome, opera */
+
+-ms-filter: blur(5px);
+
+-moz-filter: blur(5px);
+
+position: fixed; z-index: -1;top: 50px; 
+}
+.shadow{
+  
+position:fixed;
+left:0;
+top:0;
+width:100%;
+z-index:50;
+height:100%;
+background:rgba(0,0,0,0.3);
+}
+.sourcediv{
+    
+    
+        
+        margin-top: 90px;
+          float: left;
+          width: 250px;
+          height: 300px;
+          margin-left: 60px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          cursor: pointer;
+
+}
+.vpn{
+             width:60%;
+             height:70%;
+             position: relative;;
+             left:50%;
+             top:23%;
+             z-index:98;
+             background:#ffffff;
+             border-radius:30px;
+             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-left:-27%;
+
+}
+#about{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+#source{
+    background-color: #f1f3f4;
+    width: 100%;
+    height: 200%;
+}
+
+        </style>
+<div id="indeximg" style="opacity: 1;"></div>
+<div style="width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: -3;"></div>
+<div class="nav">
+    
+    <p id="navleft" >BlingCc</p>
+    <div class="circle"></div>
+    
+
+</div>
+
+
+<script>
+    $ (document).ready(function(){
+                $(".navbar").hide();
+              });
     </script>
+
+<script>
+  $ (document).ready(function(){
+              $(".shadow").hide();
+            });
+  </script>
+
+    <div class="navbar">
+      <ul style="list-style: none;padding-top: 30px;">
+        <a href="#index" class="about"><li id="navli"><button class="button">
+            首页</button></li></a>
+            <a href="#about" class="about"><li id="navli"><button class="button">
+            关于</button></li></a>
+            <a href="#source" class="about"><li id="navli"><button class="button">
+            资源</button></li></a>
+            <a href="#piece" class="about"><li id="navli"><button class="button">
+            作品</button></li></a>
+        </ul>
+<audio src="audio/棱镜.mp3" controls autoplay style="width: 100%;margin-top: 10px;"></audio>
+    </div>
+    <div class="shadow">
+
+    </div>
+
     
     <script>
-            $(document).ready(function(){
-              $(".menulogo").click(function(){
-                $(".navbar").toggle(200);
-              });
-            });
-            </script>
+        $(document).ready(function(){
+          $(".circle").click(function(){
+            $(".navbar").toggle(200);
+          });
+        });
+        </script>
+    <script>
+        $(document).ready(function(){
+          $(".circle").click(function(){
+            $(".shadow").toggle(0);
+          });
+        });
+        </script>
+    <script>
+        $(document).ready(function(){
+          $(".shadow").click(function(){
+            $(".navbar").toggle(200);
+          });
+        });
+        </script>
+    <script>
+        $(document).ready(function(){
+          $(".shadow").click(function(){
+            $(".shadow").toggle(0);
+          });
+        });
+        </script>
+    <script>
+        $(document).ready(function(){
+          $(".about").click(function(){
+            $(".shadow").toggle(0);
+          });
+        });
+        </script>
     <script>
         $(document).ready(function(){
           $(".about").click(function(){
@@ -25,173 +351,84 @@
           });
         });
         </script>
-</head>
-<body>
-       
-
-    <style>
-        *{
-             outline:none;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-        @font-face {
-          font-family:myFirstFont;
-          src: url('font/Sansation-Light.ttf');
-      }
-      
-        </style>
-
-
-
-
-
-
-
-
-
-
         
-<div class="nav">
-    
-    <a href="https://blingcc233.github.io" id="navleft" >BlingCc</a>
-    
-<img class="menulogo " src="img/menuico.png" height="30px" />
-    
 
-</div>
-
-<script>
-$ (document).ready(function(){
-            $(".navbar").hide();
-          });
-</script>
-<div class="navbar">
-    <ul style="list-style: none;">
-    <li id="navli"><a href="#index" class="about"><button class="button">
-        首页</li></button></a>
-        <li id="navli"><a href="https://blingcc233.github.io/piece.html" class="about"><button class="button">
-        作品</li></button></a>
-        <li id="navli"><a href="https://blingcc233.github.io/source.html" class="about"><button class="button">
-        资源</li></button></a>
-        <li id="navli"><a href="https://blingcc233.github.io/about.html" class="about"><button class="button">
-        关于</li></button></a>
-    </ul>
-</div>
 
 
 <div id="index">
-    <h1 id="mainname">BlingCc</h1>
-    <p id="remain">Simple web , Simple life</p>
-    <br/>
-    <p id="remain2">· 这里是<span id="remain3">CC</span>的个人主页 ·</p>
-    <br/>
-    <p id="remain2"></p>
+  <div style="margin: 0 auto;position: relative;top: 30%;">
+  <p style="text-align: center;font-family: eng;font-size: 80px;color: #d0e8ff;;">BlingCc</p>
+  <p style="margin-top: 3%;color: #ffffff;font-size: 25px;text-align: center;font-family: YouYuan;">这里是<span style="font-family: eng;font-size: 25px;">Cc</span>的主页</p>
+  <p style="margin-top: 4%;color: #d2e9ff;font-size: 30px;text-align: center;font-family: eng;">Welcome</p>
+</div>
+<!--<div style="width: 30px;height: 30px;margin: 0 auto;position: relative;top: 55%;"><a href="#about" style="transition:0.3s;color: #fff;font-size: 30px;font-family: eng;">V</a></div>--->
+</div>
+<div id="about">
+  <div style="padding-top:90px;">
+<p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;">关于我</p>
+<p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">很普通的高中生，苦逼的程序员，啥都不会</p>
+</div>
 </div>
 
+<div id="source">
+    <a href="https://blingcc233.github.io/source/vpn.html" target="_blank"><div class="sourcediv">
+        <img src="img/img1.png" width="250px">
+        <p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 40px;">V P N</p>
+    </div>
+</a>
+    <div class="sourcediv">
+        <a href="source/android/哔咔.apk"><p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">Pic ACG</p></a>
+    </div>
+    <div class="sourcediv">
+        <a href="https://code.visualstudio.com/docs/?dv=win32user" target="_blank" style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;"><p>VS Code</p></a>
+    </div>
+    <script>
+        $ (document).ready(function(){
+                    $(".vpn").hide();
+                  });
+        </script>
+    <div class="vpn">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
+<canvas id="c_n4" width="375" height="812" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.5;"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
 
-<!--
-<script>
-    $(function() {
-        $('[data-toggle="popover"]').popover()
-    })
-</script>
-<script>
-    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
-        offset: 100
-    });
-</script>
-<script>
-    hljs.initHighlightingOnLoad();
-</script>
-<script>
-    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
-        offset: 100
-    });
-</script>
-<script>
-    $("p img").each(function(i) {
-        if (!this.parentNode.href && $(this).attr("type")!=="memo") {
-            $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
-        }
-    });
-    $(document).ready(function() {
-        $("[data-fancybox]").fancybox()
-    });
-</script>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
-<script>
-    $('.close').click(function( e ){
-        e.preventDefault();
-        $.cookie('alert-box', 'closed', { path: '/' });
-    });
-    if( $.cookie('alert-box') !== 'closed' ) {
-        $('.alert').css("display","block");
-    }
-</script>
-<script type="text/javascript">
-    var _paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-        var u = "//analytics.idealclover.cn/";
-        _paq.push(['setTrackerUrl', u + 'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d = document,
-            g = d.createElement('script'),
-            s = d.getElementsByTagName('script')[0];
-        g.type = 'text/javascript';
-        g.async = true;
-        g.defer = true;
-        g.src = u + 'matomo.js';
-        s.parentNode.insertBefore(g, s);
-    })();
-</script>
--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
