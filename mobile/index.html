@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="icon.ico">
+    <link rel="shortcut icon" href="https://blingcc233.github.io/icon.ico">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlingCc</title>
@@ -26,7 +26,9 @@
             });
             }}
              else {//电脑
-            
+              $ (document).ready(function(){
+              $(".circle").hide();
+            });
 }
         
         </script>
@@ -40,11 +42,11 @@
         }
         @font-face {
           font-family:eng;
-          src: url('font/Sansation-Light.ttf');
+          src: url('https://blingcc233.github.io/font/Sansation-Light.ttf');
       }
 @font-face {
   font-family:YouYuan;
-  src: url('font/幼圆.ttf');
+  src: url('https://blingcc233.github.io/font/幼圆.ttf');
 }
 
 html,body {
@@ -84,16 +86,18 @@ html,body {
         font-weight: 550;
     }
     .navright{
-        width: 68%;
+        width: 435px;
         height: 60px;
         background-color: #ffffff;
-        margin: 0 auto;
         position: fixed;
-        z-index: 101;
-        right: 15px;
+
+        padding-right: 0px;
+        margin-right: 0px;
+        right: 0px;
+
     }
     .navbutton{
-        margin: 8px 0px 0px 30px;
+        margin: 8px 10px 0px 10px;
         padding: 7px 20px 7px 20px;
 border: #7eabd4 2px solid;
 border-radius: 70px;
@@ -269,6 +273,20 @@ background:rgba(0,0,0,0.3);
       cursor: pointer;
 
 }
+.finish{
+    
+    
+    background-color: #ffffff;
+    margin-top: 10px;
+      float: left;
+      width: 10px;
+      height: 10px;
+      margin-left: 60px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      padding-bottom: 10px;
+
+}
 .vpn{
              width:100%;
              height:70%;
@@ -290,12 +308,13 @@ background:rgba(0,0,0,0.3);
 #source{
     background-color: #f1f3f4;
     width: 100%;
-    height: 200%;
+    height: 1266px;
 }
 #piece{
     background-color: #ffffff;
     width: 100%;
-    height: 100%;
+    height: 1626px;
+
 }
 #win{
 
@@ -306,19 +325,33 @@ background:rgba(0,0,0,0.3);
         <div style="width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: -3;"></div>
 <div class="nav">
     
-    <a href="https://blingcc233.github.io/"><p id="navleft" >BlingCc</p></a>
+    <a href="https://blingcc233.github.io/" target="_blank"><p id="navleft" >BlingCc</p></a>
     <div class="navright">
         <a href="#index"><button class="navbutton">首页</button></a>
         <a href="#about"><button class="navbutton">关于</button></a>
         <a href="#source"><button class="navbutton">资源</button></a>
         <a href="#piece"><button class="navbutton">作品</button></a>
-    </div>
+    
+      </div>
     <div class="circle"></div>
     
 
 </div>
 
-
+<script>
+  $(document).ready(function(){
+    $(".navbutton").click(function(){
+      $(".vpn").hide(300);
+    });
+  });
+  </script>
+  <script>
+    $(document).ready(function(){
+      $(".navbutton").click(function(){
+        $(".shadow").hide(300);
+      });
+    });
+    </script>
 <script>
     $ (document).ready(function(){
                 $(".navbar").hide();
@@ -342,7 +375,7 @@ background:rgba(0,0,0,0.3);
             <a href="#piece" class="about"><li id="navli"><button class="button">
             作品</button></li></a>
         </ul>
-<audio src="https://blingcc233.github.io/audio/棱镜.mp3" controls autoplay style="width: 100%;margin-top: 10px;"></audio>
+<audio src="https://blingcc233.github.io/audio/棱镜.mp3" controls style="width: 100%;margin-top: 10px;"></audio>
     </div>
     <div class="shadow">
 
@@ -408,13 +441,16 @@ background:rgba(0,0,0,0.3);
 <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;">关于我</p>
 <p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">很普通的高中生，苦逼的程序员，啥都不会</p>
       <p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">喜欢打游戏，编曲，<span style="font-family:eng;">Python,C++,HTML</span>学习中</p>
-</div>
+<p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">本人<span style="font-family: eng;">QQ</span>: <span style="font-family: eng;text-decoration: #7eabd4 underline solid;cursor: pointer;">1342171891</span> . 欢迎骚扰</p>
+
+
+    </div>
 </div>
 
 <div id="source">
     <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;padding-top: 90px;">资源</p>
     <div class="sourcediv1">
-        <img src="img/img1.png" width="250px">
+        <img src="https://blingcc233.github.io/mobile/img/img1.png" width="250px">
         <p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 40px;">V P N</p>
     </div>
 
@@ -454,7 +490,7 @@ background:rgba(0,0,0,0.3);
                     });
                     </script>
     <div class="sourcediv">
-        <a href="source/android/哔咔.apk"><p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">Pic ACG</p></a>
+        <a href="https://blingcc233.github.io/mobile/source/android/哔咔.apk"><p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">Pic ACG</p></a>
     </div>
     <div class="sourcediv">
         <a href="https://code.visualstudio.com/docs/?dv=win32user" target="_blank" style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;"><p>VS Code</p></a>
@@ -467,23 +503,27 @@ background:rgba(0,0,0,0.3);
     <div class="vpn">
   <div style="margin: 0 auto;text-align: center;position: relative;top: 30%;">
     
-<a style="margin-top: 30px;" href="source/android/自由门.apk" id="androidimg"><img src="source/img/Android.png" width="250px"/></a>
+<a style="margin-top: 30px;" href="https://blingcc233.github.io/source/android/自由门.apk" id="androidimg"><img src="https://blingcc233.github.io/source/img/Android.png" width="250px"/></a>
 
 
-<a id="win" style="margin-top: 30px;" href="source/windows/Windows翻墙工具.bat"><img src="source/img/win.png" width="250px"/></a>
+<a id="win" style="margin-top: 30px;" href="https://blingcc233.github.io/source/windows/Windows翻墙工具.bat"><img src="https://blingcc233.github.io/source/img/win.png" width="250px"/></a>
 </div>
     </div>
 </div>
 
 <div id="piece">
     <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;padding-top: 90px;">作品</p>
-<a href="https://blingcc233.github.io/newyear.html"><div class="sourcediv"><p style="color: #d32c37;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">庚子</p></div></a>
+<a href="https://blingcc233.github.io/newyear.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">庚子</p></div></a>
+<a href="https://blingcc233.github.io" target="_blank"><div class="sourcediv"><p style="color: #272727;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">原主页</p></div></a>
+<a href="https://blingcc233.github.io/yutou.html" target="_blank"><div class="sourcediv"><p style="color: #70c000;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">语头</p></div></a>
+<a href="https://blingcc233.github.io/yutou.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">5 2 0</p></div></a>
+
 </div>
     
     
 
 <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
-<canvas id="c_n4" width="375" height="812" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.5;"></canvas>
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.0.3/dist/smooth-scroll.polyfills.min.js"></script>
