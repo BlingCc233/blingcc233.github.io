@@ -34,6 +34,7 @@
         </script>
     <style>
         *{
+          font-family: "Microsoft Yahei Light","Microsoft Yahei","Pingfang SC",Helvetica,sans-serif,"等线";
             outline:none;
             text-decoration: none;
             margin: 0;
@@ -67,6 +68,11 @@ html,body {
   z-index:100; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
         background: #ffffff;
         box-shadow: rgba(0,0,0,0.1) 0px 5px 20px;
+        transition: 0.25s;
+}
+.nav:hover{
+  
+  box-shadow: rgba(0,0,0,0.3) 0px 7px 25px;
 }
 
    
@@ -84,6 +90,11 @@ html,body {
         z-index: 103;
         cursor: pointer;
         font-weight: 550;
+        transition: 0.25s;
+    }
+    #nevleft:hover{
+font-size: 40px;
+
     }
     .navright{
         width: 435px;
@@ -103,9 +114,9 @@ border: #7eabd4 2px solid;
 border-radius: 70px;
 background-color: #fff;
 color: #7eabd4;
-font-family: YouYuan;
+font-family: Microsoft Yahei Light;
 font-size: 20px;
-transition: 0.2s;
+transition: 0.3s;
 cursor: pointer;
     }
     .navbutton:hover{
@@ -189,7 +200,7 @@ color: #fff;
   font-size: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-family: YouYuan;
+  font-family: Microsoft Yahei Light;
   border:none;
   border-radius:70px;
   -webkit-transition-duration: 0.3s;
@@ -247,10 +258,15 @@ z-index:50;
 height:100%;
 background:rgba(0,0,0,0.3);
 }
+.shadow:hover{
+background:rgba(0,0,0,0.5);
+
+}
 .sourcediv{
     
     
         background-color: #ffffff;
+        color: #7eabd4;
         margin-top: 60px;
           float: left;
           width: 250px;
@@ -258,11 +274,16 @@ background:rgba(0,0,0,0.3);
           margin-left: 60px;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           cursor: pointer;
+        transition: 0.3s;
 
+}
+.sourcediv:hover{
+  background-color: #f1f3f4;
 }
 .sourcediv1{
     
     
+  transition: 0.3s;
     background-color: #ffffff;
     margin-top: 60px;
       float: left;
@@ -272,6 +293,9 @@ background:rgba(0,0,0,0.3);
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       cursor: pointer;
 
+}
+.sourcediv1:hover{
+  background-color: #f1f3f4;
 }
 .finish{
     
@@ -319,10 +343,14 @@ background:rgba(0,0,0,0.3);
 #win{
 
 }
+#top{
+  width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: 999;
+}
 
         </style>
-        <div id="indeximg" style="opacity: 1;"></div>
+        <div id="indeximg"></div>
         <div style="width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: -3;"></div>
+        <div id="top"></div>
 <div class="nav">
     
     <a href="https://blingcc233.github.io/" target="_blank"><p id="navleft" >BlingCc</p></a>
@@ -363,6 +391,11 @@ background:rgba(0,0,0,0.3);
               $(".shadow").hide();
             });
   </script>
+  <script>
+    $ (document).ready(function(){
+                $("#top").hide();
+              });
+    </script>
 
     <div class="navbar">
       <ul style="list-style: none;padding-top: 30px;">
@@ -431,24 +464,24 @@ background:rgba(0,0,0,0.3);
 <div id="index">
   <div style="margin: 0 auto;position: relative;top: 30%;">
   <p style="text-align: center;font-family: eng;font-size: 80px;color: #d0e8ff;;">BlingCc</p>
-  <p style="margin-top: 3%;color: #ffffff;font-size: 25px;text-align: center;font-family: YouYuan;">这里是<span style="font-family: eng;font-size: 25px;">Cc</span>的主页</p>
+  <p style="margin-top: 3%;color: #ffffff;font-size: 25px;text-align: center;font-family: Microsoft Yahei Light;">这里是<span style="font-family: eng;font-size: 25px;">Cc</span>的主页</p>
   <p style="margin-top: 4%;color: #d2e9ff;font-size: 30px;text-align: center;font-family: eng;">Welcome</p>
 </div>
 <!--<div style="width: 30px;height: 30px;margin: 0 auto;position: relative;top: 55%;"><a href="#about" style="transition:0.3s;color: #fff;font-size: 30px;font-family: eng;">V</a></div>--->
 </div>
 <div id="about">
   <div style="padding-top:90px;">
-<p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;">关于我</p>
-<p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">很普通的高中生，苦逼的程序员，啥都不会</p>
-      <p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">喜欢打游戏，编曲，<span style="font-family:eng;">Python,C++,HTML</span>学习中</p>
-<p style="margin-top: 1%;font-size: 25px;font-family: YouYuan;padding-left: 3%;">本人<span style="font-family: eng;">QQ</span>: <span style="font-family: eng;text-decoration: #7eabd4 underline solid;cursor: pointer;">1342171891</span> . 欢迎骚扰</p>
+<p style="font-size: 50px;font-family: Microsoft Yahei Light;padding-left: 10%;color: #7eabd4;">关于我</p>
+<p style="margin-top: 1%;font-size: 25px;font-family: Microsoft Yahei Light;padding-left: 3%;">很普通的高中生，苦逼的程序员，啥都不会</p>
+      <p style="margin-top: 1%;font-size: 25px;font-family: Microsoft Yahei Light;padding-left: 3%;">喜欢打游戏，编曲，<span style="font-family:eng;">Python,C++,HTML</span>学习中</p>
+<p style="margin-top: 1%;font-size: 25px;font-family: Microsoft Yahei Light;padding-left: 3%;">本人<span style="font-family: eng;">QQ</span>: <span style="font-family: eng;text-decoration: #7eabd4 underline solid;cursor: pointer;">1342171891</span> . 欢迎骚扰</p>
 
 
     </div>
 </div>
 
 <div id="source">
-    <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;padding-top: 90px;">资源</p>
+    <p style="font-size: 50px;font-family: Microsoft Yahei Light;padding-left: 10%;color: #7eabd4;padding-top: 90px;">资源</p>
     <div class="sourcediv1">
         <img src="https://blingcc233.github.io/mobile/img/img1.png" width="250px">
         <p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 40px;">V P N</p>
@@ -493,7 +526,7 @@ background:rgba(0,0,0,0.3);
         <a href="https://blingcc233.github.io/mobile/source/android/哔咔.apk"><p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">Pic ACG</p></a>
     </div>
     <div class="sourcediv">
-        <a href="https://code.visualstudio.com/docs/?dv=win32user" target="_blank" style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;"><p>VS Code</p></a>
+        <a href="https://code.visualstudio.com/docs/?dv=win32user" target="_blank"><p  style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">VS Code</p></a>
     </div>
     <script>
         $ (document).ready(function(){
@@ -512,11 +545,12 @@ background:rgba(0,0,0,0.3);
 </div>
 
 <div id="piece">
-    <p style="font-size: 50px;font-family: YouYuan;padding-left: 10%;color: #7eabd4;padding-top: 90px;">作品</p>
-<a href="https://blingcc233.github.io/newyear.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">庚子</p></div></a>
-<a href="https://blingcc233.github.io" target="_blank"><div class="sourcediv"><p style="color: #272727;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">原主页</p></div></a>
-<a href="https://blingcc233.github.io/yutou.html" target="_blank"><div class="sourcediv"><p style="color: #70c000;font-family: YouYuan;text-align: center;font-size: 50px;line-height: 300px;">语头</p></div></a>
-<a href="https://blingcc233.github.io/yutou.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">5 2 0</p></div></a>
+    <p style="font-size: 50px;font-family: Microsoft Yahei Light;padding-left: 10%;color: #7eabd4;padding-top: 90px;">作品</p>
+<a href="https://blingcc233.github.io/newyear.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: Microsoft Yahei Light;text-align: center;font-size: 50px;line-height: 300px;">庚子</p></div></a>
+<a href="https://blingcc233.github.io/yutou.html" target="_blank"><div class="sourcediv"><p style="color: #70c000;font-family: YouYMicrosoft Yahei Lightuan;text-align: center;font-size: 50px;line-height: 300px;">语头</p></div></a>
+<a href="https://blingcc233.github.io" target="_blank"><div class="sourcediv"><p style="color: #272727;font-family: Microsoft Yahei Light;text-align: center;font-size: 50px;line-height: 300px;">原主页</p></div></a>
+
+<a href="https://blingcc233.github.io/zx.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">5 2 0</p></div></a>
 
 </div>
     
