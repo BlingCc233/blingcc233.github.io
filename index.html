@@ -1,185 +1,502 @@
+﻿
+
+
+<!--本网页-->
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="icon.ico">
+    <link rel="shortcut icon" href="https://blingcc233.github.io/icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlingCc</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </head>
-<body>
-    <!--
-        <script type="text/javascript">  
-            var url = window.location.pathname;
-            var wapurl="mobile/index.html"
-            
-            if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
-                if(window.location.href.indexOf("?mobile")<0){
-                    try{
-                        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
-                             window.location.href=wapurl; 
-                        }else{ 
-                            window.location.href=wapurl;
-                        }
-                    }catch(e){}
-                }
-            }
-            </script>-->
-
-
-    <style>
-        *{
-            outline:none;
-             text-deration:none;
-            margin: 0;
-            padding: 0;
-             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-        @font-face {
-          font-family:myFirstFont;
-          src: url('font/Sansation-Light.ttf');
-      }
-        @font-face {
-          font-family:YaHei;
-          src: url('font/微软雅黑.ttf');
-      }
-@font-face {
-  font-family:YouYuan;
-  src: url('font/幼圆.ttf');
-}
-
-        </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="nav">
-    
-        <a href="mobile/index.html" id="navleft" >BlingCc</a>
-        
-</div>
-<div>
-        
-<div class="topul">
+<body> 
        
-    <ul style="text-align: right;">
-        <li style="list-style: none;"><a href="index.html" ><button class="navrightindex">首页</button></a></li>
-        <li style="list-style: none;"><a href="piece.html" ><button class="navright">作品</button></a></li>
-        <li style="list-style: none;"><a href="source.html" ><button class="navright">资源</button></a></li>
-        <li style="list-style: none;"><a href="about.html" ><button class="navright">关于</button></a></li>
-        </ul>
+<script>
+//判断UA
+    if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) 
+	{
+        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent))
+		{
+            $ (document).ready(function(){
+              $("#win").hide();
+            });
+            $ (document).ready(function(){
+              $(".navright").hide();
+            });
+            $ (document).ready(function(){
+				$("#source").removeClass("source-win");
+			});
+            $ (document).ready(function(){
+				$("#piece").removeClass("piece-win");
+			});
+        }
+		else{
+
+            $ (document).ready(function(){
+              $("#win").hide();
+            });
+            $ (document).ready(function(){
+              $(".navright").hide();
+            });
+            $ (document).ready(function(){
+				$("#source").removeClass("source-win");
+			});
+            $ (document).ready(function(){
+				$("#piece").removeClass("piece-win");
+			});
+		}
+	}
+    else {//电脑
+        $ (document).ready(function(){
+            $(".circle").hide();
+        });
+        $ (document).ready(function(){
+			$("#source").removeClass("source-an");
+		});
+        $ (document).ready(function(){
+			$("#piece").removeClass("piece-an");
+		});
+	}
+</script>
+
+
+<!--CSS-->
+<style>
+    *{
+        font-family: "Microsoft Yahei Light","Microsoft Yahei","Pingfang SC",Helvetica,sans-serif,"等线";
+        outline:none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    @font-face {
+        font-family:eng;
+        src: url('https://blingcc233.github.io/font/Sansation-Light.ttf');
+    }
+
+	html,body {  
+        height: 100%;
+        width:100%;
+        margin: 0;
+        padding: 0;
+    }
+
+	.nav{
+		position:fixed; /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+		top:0; /* 距离窗口顶部距离 */
+		left:0; /* 距离窗口左边的距离 */
+		width:100%;  /* 高度 */
+        height: 60px;
+  		z-index:100; /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+        background: #ffffff;
+        box-shadow: rgba(0,0,0,0.1) 0px 5px 20px;
+        transition: 0.25s;
+	}
+
+	.nav:hover{
+  		box-shadow: rgba(0,0,0,0.3) 0px 7px 25px;
+	}
+
+    #navleft{
+    	outline: none;
+        float: left;
+    	line-height: 60px;
+        color:#7eabd4;
+        font-family:eng;
+        font-size: 30px;
+        padding-left: 20px;
+        text-decoration: none;
+        z-index: 103;
+        cursor: pointer;
+        font-weight: 550;
+        transition: 0.25s;
+    }
+
+    #nevleft:hover{
+		font-size: 40px;
+	}
+
+    .navright{
+        width: 435px;
+        height: 60px;
+        background-color: #ffffff;
+        position: fixed;
+        padding-right: 0px;
+        margin-right: 0px;
+        right: 0px;
+    }
+
+    .navbutton{
+        margin: 8px 10px 0px 10px;
+        padding: 7px 20px 7px 20px;
+		border: #7eabd4 2px solid;
+		border-radius: 70px;
+		background-color: #fff;
+		color: #7eabd4;
+		font-family: Microsoft Yahei Light;
+		font-size: 20px;
+		transition: 0.3s;
+		cursor: pointer;
+    }
+
+    .navbutton:hover{
+		background-color: #7eabd4;
+		color: #fff;
+    }
+	
+	.navbutton:click{
+		background-color: #7eabd4;
+		border: #fff 2px solid;
+		color: #fff;
+    }
+
+    .navbar{
+    	color:#ffffff;
+    	background: #ffffff;
+    	position:fixed;
+    	top:50px;
+    	right: 0px;
+    	border: none;
+    	width: 60%;
+    	z-index: 99;
+    	height: 100%;
+    	box-shadow: -10px 10px 5px rgba(0,0,0,0.1);
+    }
+
+	.about{/*手机导航按钮*/
+		outline: none;
+		text-align: center;
+		color: #272727;
+		background-color: #ffffff;
+		cursor: pointer;text-decoration: none;
+	}
+
+	#navli{
+		margin-top: 10px;
+		color: #272727;
+		text-align: center;
+	}
+
+	#index{
+  		width: 100%;
+		height: 100%;
+  
+	}
+
+	.word{
+		color: #d2e9ff;
+		text-align:center;
+		font-family:Microsoft Yahei Light;
+		font-size:20px;
+        transition: 0.3s;
+        padding-top: 10px;
+	}
+	
+	.button{
+  		color: #7eabd4;
+  		width: 100%;
+  		background-color: #fff;
+  		text-align: center;
+  		font-size: 20px;
+  		padding-top: 15px;
+  		padding-bottom: 15px;
+  		font-family: Microsoft Yahei Light;
+  		border:none;
+  		border-radius:70px;
+  		-webkit-transition-duration: 0.3s;
+  		cursor: pointer;
+  		transition: 0.3s;
+	}
+
+	.button:hover{
+  		outline: none;
+  		background: #f1f3f4;
+  		transition: 0.3s;
+	}
+
+	.circle {
+  		height: 30px;
+  		width: 30px;
+  		background-color:#7eabd4;
+  		border-radius: 100%;
+  		position: fixed;
+        top:15px;
+        right: 10px;
+        z-index: 103;
+        cursor: pointer;
+        transition: 0.3s;
+   		background-image: linear-gradient(to bottom right, #7eabd4, #236aad);     
+	}
+
+	.circle:hover{
+ 		background-image: linear-gradient(to bottom right, #236aad, #7eabd4); 
+	}
+
+	#indeximg{
+    	z-index: -1;
+    	position: fixed;
+   		width: 100%;
+    	height: 100%;
+    	background-repeat: no-repeat;
+    	background-size: cover;
+		background-image: url(https://bing.rthe.net/wallpaper);
+    	color: transparent;/*
+		filter: blur(10px);
+		-webkit-filter: blur(10px);  
+		-ms-filter: blur(10px);
+		-moz-filter: blur(10px);*/
+		position: fixed; z-index: -1;top: 50px; 
+	}
+
+	.shadow{
+  		transition:0.3s;
+		position:fixed;
+		left:0;
+		top:0;
+		width:100%;
+		z-index:50;
+		height:100%;
+		background:rgba(0,0,0,0.3);
+	}
+
+	.shadow:hover{
+		background:rgba(0,0,0,0.5);
+	}
+
+	.sourcediv{
+        background-color: #ffffff;
+        color: #7eabd4;
+        margin-top: 60px;
+        float: left;
+        width: 250px;
+        height: 300px;
+        margin-left: 60px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        cursor: pointer;
+        transition: 0.3s;
+	}
+
+	.sourcediv:hover{
+  		background-color: #f1f3f4;
+	}
+
+	.sourcediv1{
+  		transition: 0.3s;
+    	color: #ffffff;
+      	cursor: pointer;
+	}
+
+	.sourcediv1:hover{
+  		color: #f1f3f4;
+	}
+
+	.finish{
+    	background-color: #ffffff;
+    	margin-top: 10px;
+      	float: left;
+      	width: 10px;
+      	height: 10px;
+      	margin-left: 60px;
+      	margin-bottom: 10px;
+      	cursor: pointer;
+      	padding-bottom: 10px;
+	}
+
+	.vpn{
+        width:100%;
+        height:70%;
+        text-align: center;
+        position: fixed;
+        top: 20%;
+        transition: 0.3s;
+        z-index:98;
+        background:#ffffff;
+        border-radius:30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	#about{
+  		width: 100%;
+  		height: 100%;
+  		background-color: #ffffff;
+	}
+
+	#source{}
+	
+	.source-win{
+    	background-color: #f1f3f4;
+    	width: 100%;
+    	height: 100%;
+	}
+
+	.source-an{
+    	background-color: #f1f3f4;
+    	width: 100%;
+    	height: 1266px;
+	}
+
+	#piece{}
+
+	.piece-win{
+    	background-color: #ffffff;
+    	width: 100%;
+    	height: 100%;
+	}
+
+	.piece-an{
+    	background-color: #ffffff;
+    	width: 100%;
+    	height: 1626px;
+	}
+
+	#win{/*TODO*/}
+
+	#Index{/*TODO*/}
+
+	#About{/*TODO*/}
+
+	#Source{/*TODO*/}
+
+	#Piece{/*TODO*/}
+
+	#top{
+  		width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: 999;
+	}
+
+</style>
+
+
+
+
+
+
+<!--必要显示-->
+<div id="indeximg"></div>
+<div style="width: 100%;height: 100%;background-color: #7eabd4; position: fixed; top: 0;left: 0;z-index: -3;"></div>
+<div id="top"></div>
+
+
+
+<!--电脑导航栏-->
+<div class="nav">
+    <a href="https://blingcc233.github.io/" target="_blank"><p id="navleft" >BlingCc</p></a>
+    <div class="circle"></div>
+	<div class="navright">
+        <button class="navbutton" id="Index">首页</button>
+        <button class="navbutton" id="About">关于</button>
+        <button class="navbutton" id="Source">资源</button>
+        <button class="navbutton" id="Piece">作品</button>
+     </div>
 </div>
-<div>
-        <h1 id="mainname">BlingCc</h1>
-        <p id="remain">Simple web , Simple life</p>
-        <br/>
-        <p id="remain2" style="font-family: YouYuan;"><span style="font-family: YaHei; font-size: 25px;">·</span> 这里是<span id="remain3">CC</span>的个人主页 <span style="font-family: YaHei; font-size: 25px;">·</span style="font-family: YaHei; font-size: 25px;"></p>
-        <br/>
-        <p id="remain2"></p>
+
+
+<!--手机导航栏-->
+<div class="navbar">
+    <ul style="list-style: none;padding-top: 30px;">
+        <a href="#index" class="about">
+			<li id="navli">
+				<button class="button" id="Index">
+            		首页
+				</button>
+			</li>
+		</a>
+        <a href="#about" class="about">
+			<li id="navli">
+				<button class="button" id="About">
+            		关于
+				</button>
+			</li>
+		</a>
+        <a href="#source" class="about">
+			<li id="navli">
+				<button class="button" id="Source">
+            		资源
+				</button>
+			</li>
+		</a>
+        <a href="#piece" class="about">
+			<li id="navli">
+				<button class="button" id="Piece">
+           			作品
+				</button>
+			</li>
+		</a>
+    </ul>
 </div>
-</div>
+<div class="shadow"></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="solarsys">
-  <!--太阳-->
-<a href="zx.html">
-  <div class='sun'></div>
-</a>
-
-  <!--水星轨道-->
-  <div class='mercuryOrbit'></div>
-
-  <!--水星-->
-  <div class='mercury'></div>
-
-  <!--金星轨道-->
-  <div class='venusOrbit'></div>
-
-  <!--金星-->
-  <div class='venus'></div>
-
-  <!--地球轨道-->
-  <div class='earthOrbit'></div>
-
-  <!--地球-->
-  <div class='earth'></div>
-
-  <!--火星轨道-->
-  <div class='marsOrbit'></div>
-
-  <!--火星-->
-  <div class='mars'></div>
-
-  <!--木星轨道-->
-  <div class='jupiterOrbit'></div>
-
-  <!--木星-->
-<a href="yutou.html">
-  <div class='jupiter'></div>
-</a>
-
-  <!--土星轨道-->
-  <div class='saturnOrbit'></div>
-
-  <!--土星-->
-  <div class='saturn'></div>
-
-  <!--天王星轨道-->
-  <div class='uranusOrbit'></div>
-
-  <!--天王星-->
-  <div class='uranus'></div>
-
-  <!--海王星轨道-->
-  <div class='neptuneOrbit'></div>
-
-  <!--海王星-->
-
-  <a href="newyear.html"><div class='neptune'></div></a>
+<!--首页-->
+<div id="index">
+	<p style="line-height: 10px;color:#7eabd4;font-family:eng;font-size: 1px;padding-left: 20px;text-decoration: none;">BlingCc</p>
+	<div style="z-index: 1;margin-top: 35vh;margin-bottom:35vh;margin-left: auto;margin-right: auto;">
+		<p style="text-align: center;font-family: eng;font-size: 80px;color: #d0e8ff;;">BlingCc</p>
+		<p style="margin-top: 10px;color: #ffffff;font-size: 22px;text-align: center;font-family: Microsoft Yahei Light;"><a href="https://blingcc.lanzous.com/iLGHqe5lg1c" target="_blank" style="font-family: eng;color:#fff;">·</a> 这里是<span style="font-family: eng;">CC</span>的主页 <a href="https://blingcc.lanzous.com/iN8ane6scch" target="_blank" style="font-family: eng;color:#fff;">·</a></p>
+		<p class="word">「 <span id="jinrishici-sentence" style=="font-family: Microsoft Yahei Light;">···</span> 」</p>
+	</div>
+<!--<div style="width: 30px;height: 30px;margin: 0 auto;position: relative;top: 55%;"><a href="#about" style="transition:0.3s;color: #fff;font-size: 30px;font-family: eng;">V</a></div>--->
 </div>
 
 
+<!--介绍页-->
+<div id="about">
+	<p style="padding-top:90px;font-size: 50px;font-family: Microsoft Yahei;padding-left: 10%;color: #7eabd4;">关于我</p>	
+	<div style="padding-top:30px;">
+		<p style="background-color:#fff;margin-top: 1%;font-size: 25px;font-family: Microsoft Yahei Light;padding-left: 3%;">很普通的高中生，苦逼的程序员，啥都不会</p>
+    	<p style="background-color:#fff;margin-top: 1%;font-size: 25px;font-family: Microsoft Yahei Light;padding-left: 3%;">喜欢打游戏(OSU!)、FL编曲，</p>
+		<p style="background-color:#fff;font-family:eng;padding-left: 3%;margin-top: 1%;font-size: 25px;">Python,C++,PHP,JavaScript学习中</p>
+		<p style="background-color:#fff;margin-top: 1%;font-size: 25px;font-family: Microsoft Yahei Light;padding-left: 3%;">本人<span ><a href="https://blingcc.lanzous.com/igM5re2s1vg" target="_blank" style="font-family: eng;color:#000;">Q</a><a href="https://blingcc.lanzous.com/iHvuGe2s2ta" target="_blank" style="font-family: eng;color:#000;">Q</a></span>: <span style="font-family: eng;text-decoration: #7eabd4 underline solid;cursor: pointer;">2415364721</span> . 欢迎骚扰</p>
+	</div>
+</div>
+
+
+<!--资源页-->
+<div id="source" class="source-win source-an">
+    <p style="font-size: 50px;font-family: Microsoft Yahei;padding-left: 10%;color: #7eabd4;padding-top: 90px;">资源</p>
+    <div class="sourcediv">
+        <a href="https://www.lanzous.com/i9hp9qb" target="_blank"><p style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">Pic ACG</p></a>
+    </div>
+    <div class="sourcediv">
+        <a href="https://code.visualstudio.com/docs/?dv=win32user" target="_blank"><p  style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">VS Code</p></a>
+    </div>
+    <div class="sourcediv">
+        <a href="https://www.worldometers.info/coronavirus/" target="_blank"><p  style="color: #7eabd4;font-family: eng;text-align: center;font-size: 50px;line-height: 300px;">COVID</p></a>
+    </div>
+    <div class="vpn">
+  		<div style="margin: 0 auto;text-align: center;position: relative;top: 30%;">
+			<a style="margin-top: 30px;" href="https://www.lanzous.com/i9tja5c" id="androidimg" target="_blank"><img src="https://blingcc233.github.io/source/img/Android.png" width="250px"/></a>
+			<a id="win" style="margin-top: 30px;" href="https://www.lanzous.com/i9tjm0j" target="_blank"><img src="https://blingcc233.github.io/source/img/win.png" width="250px"/></a>
+		</div>
+    </div>
+</div>
+
+
+<!--作品页-->
+<div id="piece" class="piece-win piece-an">
+    <p style="font-size: 50px;font-family: Microsoft Yahei;padding-left: 10%;color: #7eabd4;padding-top: 90px;">作品</p>
+	<a href="newyear.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: Microsoft Yahei Light;text-align: center;font-size: 50px;line-height: 300px;">庚子</p></div></a>
+	<a href="yutou.html" target="_blank"><div class="sourcediv"><p style="color: #70c000;font-family: YouYMicrosoft Yahei Lightuan;text-align: center;font-size: 50px;line-height: 300px;">忍头</p></div></a>
+	<a href="https://blingcc233.github.io" target="_blank"><div class="sourcediv"><p style="color: #272727;font-family: Microsoft Yahei Light;text-align: center;font-size: 50px;line-height: 300px;">原主页</p></div></a>
+	<a href="https://blingcc233.github.io/zx.html" target="_blank"><div class="sourcediv"><p style="color: #d32c37;font-family: eng;text-align: center;font-size: 60px;line-height: 300px;">5 2 0</p></div></a>
+</div>
+    
+
+<div style="width:100%;">
+	<p class="sourcediv1" style="color:#fff;margin-top: 100px;margin-bottom:3px;font-size: 15px;text-align:center;font-family:Microsoft Yahei Light;cursor:pointer;">2020</p>
+	<p class="sourcediv1" style="color:#fff;margin-top: 5px;margin-bottom:20px;font-size: 15px;text-align:center;font-family:Microsoft Yahei Light;cursor:pointer;">CC</p>
+	<a href="https://blingcc.rthe.xyz/v2ray.html"  ><p style="color:#fff;margin-top: 5px;margin-bottom:20px;font-size: 15px;text-align:center;font-family:Microsoft Yahei Light;cursor:pointer;">节点链接</p></a>
+	<a href="https://blingcc233.github.io/v2ray.html" ><p style="color:#fff;margin-top: 5px;margin-bottom:20px;font-size: 15px;text-align:center;font-family:Microsoft Yahei Light;cursor:pointer;">备用链接</p></a>
+	                                                                                                                    
+</div>
+
+
+<!--
 <script src="https://cdn.jsdelivr.net/gh/idealclover/clover/libs/canvas-nest/canvas-nest.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.15.0/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
@@ -187,65 +504,75 @@
 <script src="https://cdn.jsdelivr.net/npm/highlight.js@9.15.7/lib/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
 
-<!--
 <script>
-    $(function() {
-        $('[data-toggle="popover"]').popover()
-    })
+	//Scoll
+	export default {
+ 		data () {
+ 			return {
+ 			}
+ 		},
+ 		methods: {
+ 			Index {
+  				debugger
+  // 获取点击的按钮对应页面的id
+  				var PageId1 = '#index'
+  // 打印出对应页面与窗口的距离
+  				console.log(PageId1.offsetTop)
+  // 使用平滑属性，滑动到上方获取的距离
+  // 下方我只设置了top，当然 你也可以加上 left 让他横向滑动
+  // widow 根据浏览器滚动条，如果你是要在某个盒子里面产生滑动，记得修改
+  				window.scrollTo({
+  					'top': PageId1.offsetTop,
+  					'behavior': 'smooth'
+  				})
+ 			}
+ 		}
+	}
 </script>
+-->
+
 <script>
-    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
-        offset: 100
-    });
-</script>
-<script>
-    hljs.initHighlightingOnLoad();
-</script>
-<script>
-    var scroll = new SmoothScroll('a.turn-up, .article-list a', {
-        offset: 100
-    });
-</script>
-<script>
-    $("p img").each(function(i) {
-        if (!this.parentNode.href && $(this).attr("type")!=="memo") {
-            $(this).wrap("<a href='" + this.src + "' data-fancybox='fancybox' data-caption='" + this.alt + "'></a>")
-        }
-    });
-    $(document).ready(function() {
-        $("[data-fancybox]").fancybox()
+	$(document).ready(function(){
+		$('#Index').click(function(){$('html,body').animate({scrollTop:$('#index').offset().top}, 700);});
+		$('#About').click(function(){$('html,body').animate({scrollTop:$('#about').offset().top}, 700);});
+		$('#Source').click(function(){$('html,body').animate({scrollTop:$('#source').offset().top}, 700);});
+		$('#Piece').click(function(){$('html,body').animate({scrollTop:$('#piece').offset().top}, 700);});
+      	$(".navbutton").click(function(){
+			$(".vpn").hide(300);
+        	$(".shadow").hide(300);
+      	});
+        $(".navbar").hide(00);
+        $(".shadow").hide();
+        $("#top").hide();
+        $(".vpn").hide();
+      	$(".sourcediv1").click(function(){
+        	$(".vpn").toggle(300);
+            $(".shadow").toggle(00);
+      	});
+        $(".vpn").click(function(){
+        	$(".vpn").toggle(300);
+            $(".shadow").toggle(00);
+        });
+        $(".shadow").click(function(){
+            $(".vpn").hide(300);
+            $(".navbar").hide(300);
+        });
+        $(".circle").click(function(){
+        	$(".navbar").toggle(300);
+        	$(".shadow").toggle(0);
+        });
+   
+        $(".shadow").click(function(){
+            $(".shadow").toggle(0);
+        });
+   
+        $(".about").click(function(){
+            $(".shadow").toggle(0);
+            $(".navbar").toggle(300);
+          });
     });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
-<script>
-    $('.close').click(function( e ){
-        e.preventDefault();
-        $.cookie('alert-box', 'closed', { path: '/' });
-    });
-    if( $.cookie('alert-box') !== 'closed' ) {
-        $('.alert').css("display","block");
-    }
-</script>
-<script type="text/javascript">
-    var _paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-        var u = "//analytics.idealclover.cn/";
-        _paq.push(['setTrackerUrl', u + 'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d = document,
-            g = d.createElement('script'),
-            s = d.getElementsByTagName('script')[0];
-        g.type = 'text/javascript';
-        g.async = true;
-        g.defer = true;
-        g.src = u + 'matomo.js';
-        s.parentNode.insertBefore(g, s);
-    })();
-</script>
--->
+
 </body>
 </html>
